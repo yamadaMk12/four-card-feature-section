@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* Neutral */
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --DarkBlue: hsl(229, 6%, 66%);
+    --LightGray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--LightGray);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+main h1:first-child {
+    margin-top: 5rem;
+    font-size: 1.8rem;
+    font-weight: 200;
+    color: var(--VeryDarkBlue);
+    text-align: center;
+}
+
+main h1:nth-child(2) {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--VeryDarkBlue);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main .description {
+    font-size: 15px;
+    font-weight: 400;
+    max-width: 32rem;
+    word-wrap: break-word;
+    text-align: center;
+    color: var(--DarkBlue);
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+section:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    width: 20rem;
+    height: 15rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 2rem;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--VeryDarkBlue);
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--DarkBlue);
+    margin-bottom: 50px;
+}
+
+.card img {
+    display: block;
+    justify-self: end;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--Cyan);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.red::after {
+    background-color: var(--Red);
+}
+
+.orange::after {
+    background-color: var(--Orange);
+}
+
+.blue::after {
+    background-color: var(--Blue);
+}
+
+@media screen and (max-width: 375px) {
+
+    main h1:first-child {
+        font-size: 1.6rem;
+    }
+
+    main h1:nth-child(2) {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* .card .header-section {
+    background-color: red;
+    height: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+} */
